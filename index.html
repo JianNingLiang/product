@@ -106,14 +106,14 @@
 <body>
 <div class="content">
     <div class="logo">
-        <img src="https://github.com/LauraPig/order/logo.png" alt="">
+        <img src="logo.png" alt="">
         <div>DiningHall</div>
     </div>
     <div class="picture-Preview">
         <div class="image-display">
-            <img src="https://github.com/LauraPig/order/0.png" alt="">
-            <img src="https://github.com/LauraPig/order/1.png" alt="">
-            <img src="https://github.com/LauraPig/order/2.png" alt="">
+            <img src="0.png" alt="">
+            <img src="1.png" alt="">
+            <img src="2.png" alt="">
         </div>
     </div>
     <div class="attribute">
@@ -136,13 +136,13 @@
 <div class="footer">
     <button onclick='download()' id="download">立 即 安 装</button>
 </div>
-<div id="weiXin">
-    <img src="https://github.com/LauraPig/order/weixin_tip.png" alt="点击右上角按钮,选择在浏览器打开">
-</div>
+<!-- <div id="weiXin">
+    <img src="weixin_tip.png" alt="点击右上角按钮,选择在浏览器打开">
+</div> -->
 <script>
     var ua = navigator.userAgent.toLowerCase();
     if (ua.match(/MicroMessenger/i) == "micromessenger") {
-        document.getElementById('weiXin').style.display = 'block';
+        // document.getElementById('weiXin').style.display = 'block';
     }
     function download() {
         var download = document.getElementById('download');
@@ -152,7 +152,7 @@
             window.location.href = "itms-services://?action=download-manifest&url=https://fasohdininghallstorage02.blob.core.chinacloudapi.cn/dininghallupload/app.plist";
             setTimeout(function () {
                 download.innerHTML='点击安装后,请按Home键在桌面查看';
-            },4000);
+            },2000);
         } else {
             window.location.href = "https://fasohdininghallstorage02.blob.core.chinacloudapi.cn/dininghallupload/DinningHall_V1.0.8.apk";
             setTimeout(function () {
